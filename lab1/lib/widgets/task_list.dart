@@ -14,7 +14,6 @@ class TaskList extends StatelessWidget{
     return ListView(children: [
       for (final task in tasks) ListTile(
         leading: StatusIcon(task), 
-        
         title: Text(task.title)),
         onTap: (){
          taskHandler.toggleTask(task);
