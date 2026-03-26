@@ -11,7 +11,8 @@ class MainView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Things todo'),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      actions: _actions(context),
           ),
       body: TaskList(),
         floatingActionButton: FloatingActionButton(
@@ -23,8 +24,12 @@ class MainView extends StatelessWidget {
                  )
              );
         },
-        toolTip: 'Add todo',
+        tooltip: 'Add todo',
         child: const Icon(Icons.add),
         ));
   }
+  List<Widget> _actions(context) {
+    return [];
+  }
+
 }
